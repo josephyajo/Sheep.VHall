@@ -15,8 +15,7 @@ namespace Sheep.VHall.Tests
         [TestMethod()]
         public void GetWebinarListTest()
         {
-
-            IVHallHandler vhallHandler = new VHallHandler(AuthType.Verification);
+            IVHallHandler vhallHandler = new VHallHandler();
             WebinarList val = vhallHandler.FetchWebinarList();
             Assert.IsNotNull(val);
         }
@@ -24,8 +23,8 @@ namespace Sheep.VHall.Tests
         [TestMethod()]
         public void GetWebinarStateTest()
         {
-            IVHallHandler vhallHandler = new VHallHandler(AuthType.Verification);
-            WebinarState val = vhallHandler.FetchWebinarState("833879698");
+            IVHallHandler vhallHandler = new VHallHandler();
+            WebinarState val = vhallHandler.FetchWebinarState(833879698);
             Assert.IsNotNull(val);
         }
     }

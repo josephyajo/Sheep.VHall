@@ -9,8 +9,10 @@ namespace Sheep.VHall
 {
     public interface IVHallHandler
     {
-        WebinarList FetchWebinarList();
+        bool IsReady { get; }
 
-        WebinarState FetchWebinarState(string webinar_id);
+        WebinarList FetchWebinarList(int type = 1, int pos = 0, int limit = 0, int?[] status = null);
+
+        WebinarState FetchWebinarState(int webinar_id);
     }
 }

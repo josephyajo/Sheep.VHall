@@ -4,6 +4,6 @@ G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHall\obj\Debug\Sheep.VHall.dll
 G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHall\obj\Debug\Sheep.VHall.pdb
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Debug\Sheep.VHall.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Debug\Sheep.VHall.pdb
-G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.csprojResolveAssemblyReference.cache
 G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.pdb
+G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.csprojResolveAssemblyReference.cache

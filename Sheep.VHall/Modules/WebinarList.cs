@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
-    public class WebinarList : BaseInfo
+    public class WebinarList : BaseMessage
     {
         public Data data { get; set; }
     }
@@ -20,7 +20,7 @@ namespace Sheep.VHall.Modules
 
     public class Lists
     {
-        public Int64 webinar_id { get; set; }
+        public int webinar_id { get; set; }
 
         public string subject { get; set; }
 

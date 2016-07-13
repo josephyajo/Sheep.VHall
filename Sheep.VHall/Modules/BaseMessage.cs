@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
-    public class BaseInfo
+    public class BaseMessage
     {
         public Code code { get; set; }
 
-        //public string msg { get; set; }
+        public string msg { get; set; }
     }
 
     public enum Code

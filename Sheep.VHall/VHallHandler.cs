@@ -1,28 +1,17 @@
-﻿using Sheep.VHall.Config;
+﻿using Sheep.VHall.ApiAccess;
+using Sheep.VHall.Config;
 using Sheep.VHall.Modules;
-using Sheep.VHall.Util;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
 using System.Text;
 
 namespace Sheep.VHall
 {
-    public enum AuthType
-    {
-        Verification = 1,
-        Autograph = 2
-    }
-
     public class VHallHandler : IVHallHandler
     {
-        private int auth_type = 0;
         private static VHallConfig vhallConfig;
-        private static string signed_at = string.Empty;
         private static string sign = string.Empty;
 
-        private string initPostData = string.Empty;
+        private string initParameter = string.Empty;
 
         private const string api_url = "http://e.vhall.com/api/vhallapi/v2/";
         private const string webinar_list_url = api_url + "webinar/list";
@@ -30,84 +19,62 @@ namespace Sheep.VHall
 
         public bool IsReady { get; private set; }
 
-        public VHallHandler(AuthType type)
+        public VHallHandler()
         {
             if (vhallConfig == null)
             {
                 vhallConfig = XmlConfigurator.Configure<VHallConfig>();
             }
 
-            switch (type)
+            Security security = vhallConfig.Security;
+            AuthType auth = security.AuthType;
+
+            switch (auth)
             {
                 case AuthType.Verification:
                     {
-                        auth_type = type.GetHashCode();
-                        Verification verification = vhallConfig.Verification;
-                        initPostData = "auth_type=" + auth_type.ToString() + "&account=" + verification.account + "&password=" + verification.password;
-
-                        IsReady = true;
+                        initParameter = security.ToString();
                     }
                     break;
                 case AuthType.Autograph:
                     {
-                        auth_type = type.GetHashCode();
-                        Autograph autograph = vhallConfig.Autograph;
-                        signed_at = SecurityHandle.ConvertUnixTimeStamp(DateTime.Now).ToString();
-                        Dictionary<string, object> d = new Dictionary<string, object>();
-
-                        IsReady = true;
+                        initParameter = security.ToString();
                     }
                     break;
                 default:
                     break;
             }
+
+            IsReady = true;
         }
 
         //获取活动列表
-        public WebinarList FetchWebinarList()
+        public WebinarList FetchWebinarList(int type = 1, int pos = 0, int limit = 0, int?[] status = null)
         {
             if (IsReady)
-                return HttpPost<WebinarList>(webinar_list_url, initPostData + "&type=1");
+            {
+                StringBuilder parameter = new StringBuilder();
+                parameter.AppendFormat("{0}&type={1}&pos={2}", initParameter, type, pos);
+                if (limit != 0)
+                    parameter.AppendFormat("&limit={0}", limit);
+                if (status != null)
+                    parameter.AppendFormat("&status=[{0}]", string.Join(",", status));
+                return CallApi.HttpPost<WebinarList>(webinar_list_url, parameter.ToString());
+            }
             else
                 return null;
         }
 
         //获取活动信息
-        public WebinarState FetchWebinarState(string webinar_id)
+        public WebinarState FetchWebinarState(int webinar_id)
         {
             if (IsReady)
-                return HttpPost<WebinarState>(webinar_state_url, initPostData + "&webinar_id=" + webinar_id);
+            {
+                string parameter = string.Format("{0}&webinar_id={1}", initParameter, webinar_id);
+                return CallApi.HttpPost<WebinarState>(webinar_state_url, parameter);
+            }
             else
                 return null;
-        }
-
-        private T HttpPost<T>(string url, string postData)
-        {
-            byte[] data = Encoding.UTF8.GetBytes(postData);
-
-            HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
-            request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = data.Length;
-            request.Proxy = null;
-            using (Stream reqStream = request.GetRequestStream())
-            {
-                reqStream.Write(data, 0, data.Length);
-            }
-
-            HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-            string receiveData = string.Empty;
-            using (Stream respStream = response.GetResponseStream())
-            {
-                using (StreamReader respStreamReader = new StreamReader(respStream, Encoding.UTF8))
-                {
-                    receiveData = respStreamReader.ReadToEnd();
-                }
-            }
-
-            string result = ConvertHandle.ToGB2312(receiveData);
-
-            return JsonHandle.JsonToObject<T>(result);
         }
 
     }

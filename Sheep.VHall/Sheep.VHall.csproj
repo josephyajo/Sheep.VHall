@@ -42,16 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\Autograph.cs" />
+    <Compile Include="ApiAccess\CallApi.cs" />
     <Compile Include="Config\VHallConfig.cs" />
     <Compile Include="Config\ConfigurationSectionHandler.cs" />
     <Compile Include="Config\VHallBaseConfig.cs" />
-    <Compile Include="Config\Verification.cs" />
     <Compile Include="Config\XmlConfigurator.cs" />
-    <Compile Include="IVhallHandler.cs" />
+    <Compile Include="IVHallHandler.cs" />
     <Compile Include="Util\XmlHandle.cs" />
     <Compile Include="VHallHandler.cs" />
-    <Compile Include="Modules\BaseInfo.cs" />
+    <Compile Include="Modules\BaseMessage.cs" />
     <Compile Include="Modules\WebinarList.cs" />
     <Compile Include="Modules\WebinarState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

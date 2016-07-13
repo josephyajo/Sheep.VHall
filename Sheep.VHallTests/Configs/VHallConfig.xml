@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <vhallconfig>
-  <security auth_type="1">
+  <security auth_type="Verification">
     <verification>
       <account>v13630542</account>
       <password>cjzk8888</password>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
-    public class WebinarState : BaseInfo
+    public class WebinarState : BaseMessage
     {
         public int data { get; set; }
     }
