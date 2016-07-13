@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<vhallconfig>
+  <autograph>
+    <app_key>1363054200</app_key>
+    <secret_key>fcac92743bdfc256e46ac647f102797a</secret_key>
+  </autograph>
+  <verification>
+    <account>v13630542</account>
+    <password>cjzk8888</password>
+  </verification>
+</vhallconfig>

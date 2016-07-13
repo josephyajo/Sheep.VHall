@@ -1,0 +1,10 @@
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\Sheep.VHallTests.dll.config
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\Sheep.VHallTests.dll
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\Sheep.VHallTests.pdb
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\Sheep.VHall.dll
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\Sheep.VHall.pdb
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Release\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\obj\Release\Sheep.VHallTests.csprojResolveAssemblyReference.cache
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\obj\Release\Sheep.VHallTests.dll
+G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\obj\Release\Sheep.VHallTests.pdb
