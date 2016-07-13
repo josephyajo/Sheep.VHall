@@ -15,6 +15,7 @@ namespace Sheep.VHall.Tests
         [TestMethod()]
         public void GetWebinarListTest()
         {
+
             IVHallHandler vhallHandler = new VHallHandler(AuthType.Verification);
             WebinarList val = vhallHandler.FetchWebinarList();
             Assert.IsNotNull(val);
