@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
-    public class WebinarList : BaseMessage
+    public class WebinarListResponse : BaseResponse
     {
-        public Data data { get; set; }
+        public WebinarListData data { get; set; }
     }
 
-    public class Data
+    public class WebinarListData
     {
         public List<Lists> lists { get; set; }
 

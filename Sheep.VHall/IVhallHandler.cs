@@ -11,8 +11,12 @@ namespace Sheep.VHall
     {
         bool IsReady { get; }
 
-        WebinarList FetchWebinarList(int type = 1, int pos = 0, int limit = 0, int?[] status = null);
+        WebinarListResponse FetchWebinarList(FetchWebinarRequest request = null);
 
-        WebinarState FetchWebinarState(int webinar_id);
+        WebinarStateResponse FetchWebinarState(int webinar_id);
+
+        WebinarFetchResponse GetWebinarFetch(int webinar_id, string fields = null);
+
+        WebinarUpdateResponse SendWebinarUpdate(WebinarUpdateRequest request = null);
     }
 }

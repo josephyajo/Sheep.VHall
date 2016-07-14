@@ -16,15 +16,31 @@ namespace Sheep.VHall.Tests
         public void GetWebinarListTest()
         {
             IVHallHandler vhallHandler = new VHallHandler();
-            WebinarList val = vhallHandler.FetchWebinarList();
+            WebinarListResponse val = vhallHandler.FetchWebinarList();
             Assert.IsNotNull(val);
         }
 
         [TestMethod()]
-        public void GetWebinarStateTest()
+        public void FetchWebinarStateTest()
         {
             IVHallHandler vhallHandler = new VHallHandler();
-            WebinarState val = vhallHandler.FetchWebinarState(833879698);
+            WebinarStateResponse val = vhallHandler.FetchWebinarState(833879698);
+            Assert.IsNotNull(val);
+        }
+
+        [TestMethod()]
+        public void GetWebinarFetchTest()
+        {
+            IVHallHandler vhallHandler = new VHallHandler();
+            WebinarFetchResponse val = vhallHandler.GetWebinarFetch(833879698);
+            Assert.IsNotNull(val);
+        }
+
+        [TestMethod()]
+        public void SendWebinarUpdateTest()
+        {
+            IVHallHandler vhallHandler = new VHallHandler();
+            WebinarUpdateResponse val = vhallHandler.SendWebinarUpdate();
             Assert.IsNotNull(val);
         }
     }

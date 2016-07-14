@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
-    public class BaseMessage
+    public class BaseResponse
     {
         public Code code { get; set; }
 
