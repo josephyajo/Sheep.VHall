@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sheep.VHall", "Sheep.VHall\Sheep.VHall.csproj", "{76ACF2C0-410B-404C-8A18-C56281F300F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sheep.VHallTests", "Sheep.VHallTests\Sheep.VHallTests.csproj", "{F85FDA82-E047-47A1-879C-5C9DDDCED780}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sheep.VHall.Core", "Sheep.VHall.Core\Sheep.VHall.Core.xproj", "{E8DA396B-28C4-45A0-86F9-0DF1977AFCDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F85FDA82-E047-47A1-879C-5C9DDDCED780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F85FDA82-E047-47A1-879C-5C9DDDCED780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F85FDA82-E047-47A1-879C-5C9DDDCED780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DA396B-28C4-45A0-86F9-0DF1977AFCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DA396B-28C4-45A0-86F9-0DF1977AFCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DA396B-28C4-45A0-86F9-0DF1977AFCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DA396B-28C4-45A0-86F9-0DF1977AFCDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

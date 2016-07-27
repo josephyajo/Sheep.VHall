@@ -1,10 +1,6 @@
 ﻿using Sheep.VHall.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
@@ -43,9 +39,12 @@ namespace Sheep.VHall.Modules
             foreach (PropertyInfo prop in props)
             {
                 Func<object, object> getValue = ReappearMember.CreatePropertyGetter(prop);
-                object obj = getValue(this);
+
+                var obj = getValue(this);
                 if (obj != null)
+                {
                     parameter += "&" + prop.Name + "=" + obj.ToString();
+                }
             }
             return parameter;
         }

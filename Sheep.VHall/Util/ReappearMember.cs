@@ -4,7 +4,7 @@ using System.Reflection.Emit;
 
 namespace Sheep.VHall.Util
 {
-    public class ReappearMember
+    internal class ReappearMember
     {
         public static Action<object, object> CreatePropertySetter(PropertyInfo property)
         {
@@ -24,10 +24,10 @@ namespace Sheep.VHall.Util
                 il.Emit(OpCodes.Unbox_Any, type);
             else
                 il.Emit(OpCodes.Castclass, type);
-            if (!property.DeclaringType.IsValueType)
-                il.EmitCall(OpCodes.Callvirt, setMethod, null);
-            else
+            if (property.DeclaringType.IsValueType)
                 il.EmitCall(OpCodes.Call, setMethod, null);
+            else
+                il.EmitCall(OpCodes.Callvirt, setMethod, null);
             il.Emit(OpCodes.Ret);
 
             return dm.CreateDelegate(typeof(Action<object, object>)) as Action<object, object>;
@@ -45,7 +45,15 @@ namespace Sheep.VHall.Util
 
             ILGenerator il = dm.GetILGenerator();
             il.Emit(OpCodes.Ldarg_0);
-            il.EmitCall(OpCodes.Call, getMethod, null);
+            if (property.DeclaringType.IsValueType)
+                il.EmitCall(OpCodes.Call, getMethod, null);
+            else
+                il.EmitCall(OpCodes.Callvirt, getMethod, null);
+            Type type = property.PropertyType;
+            if (type.IsValueType)
+                il.Emit(OpCodes.Box, type);
+            else
+                il.Emit(OpCodes.Castclass, type);
             il.Emit(OpCodes.Ret);
 
             return dm.CreateDelegate(typeof(Func<object, object>)) as Func<object, object>;

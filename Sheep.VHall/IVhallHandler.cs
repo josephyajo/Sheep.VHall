@@ -1,9 +1,4 @@
 ﻿using Sheep.VHall.Modules;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sheep.VHall
 {
@@ -17,6 +12,6 @@ namespace Sheep.VHall
 
         WebinarFetchResponse GetWebinarFetch(int webinar_id, string fields = null);
 
-        WebinarUpdateResponse SendWebinarUpdate(WebinarUpdateRequest request = null);
+        WebinarUpdateResponse SendWebinarUpdate(WebinarUpdateRequest request);
     }
 }

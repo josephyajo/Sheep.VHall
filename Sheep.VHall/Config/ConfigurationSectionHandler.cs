@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Xml;
 
 namespace Sheep.VHall.Config

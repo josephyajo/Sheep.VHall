@@ -1,8 +1,6 @@
 ﻿using Sheep.VHall.ApiAccess;
 using Sheep.VHall.Config;
 using Sheep.VHall.Modules;
-using System;
-using System.Text;
 
 namespace Sheep.VHall
 {
@@ -85,11 +83,11 @@ namespace Sheep.VHall
                 return null;
         }
 
-        public WebinarUpdateResponse SendWebinarUpdate(WebinarUpdateRequest request = null)
+        public WebinarUpdateResponse SendWebinarUpdate(WebinarUpdateRequest request)
         {
             if (IsReady)
             {
-                string parameter = string.Format("{0}{1}", initParameter, request == null ? new WebinarFetchData().ToString() : request.ToString());
+                string parameter = string.Format("{0}{1}", initParameter, request.ToString());
                 return CallApi.HttpPost<WebinarUpdateResponse>(webinar_update_url, parameter);
             }
             else
