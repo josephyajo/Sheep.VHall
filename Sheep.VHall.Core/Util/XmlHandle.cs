@@ -32,7 +32,7 @@ namespace Sheep.VHall.Core.Util
 
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
 
-            using (MemoryStream ms = new MemoryStream(Encoding.Default.GetBytes(value)))
+            using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(value)))
             {
                 using (StreamReader reader = new StreamReader(ms, true))
                 {

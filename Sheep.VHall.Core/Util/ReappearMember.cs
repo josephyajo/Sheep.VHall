@@ -20,11 +20,11 @@ namespace Sheep.VHall.Core.Util
             il.Emit(OpCodes.Ldarg_0);
             il.Emit(OpCodes.Ldarg_1);
             Type type = property.PropertyType;
-            if (type.IsValueType)
+            if (type.GetTypeInfo().IsValueType)
                 il.Emit(OpCodes.Unbox_Any, type);
             else
                 il.Emit(OpCodes.Castclass, type);
-            if (!property.DeclaringType.IsValueType)
+            if (!property.DeclaringType.GetTypeInfo().IsValueType)
                 il.EmitCall(OpCodes.Callvirt, setMethod, null);
             else
                 il.EmitCall(OpCodes.Call, setMethod, null);

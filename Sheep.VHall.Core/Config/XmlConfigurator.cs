@@ -1,4 +1,6 @@
-﻿using System.Xml;
+﻿using System;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 using Sheep.VHall.Core.Util;
 
 namespace Sheep.VHall.Core.Config
@@ -7,11 +9,12 @@ namespace Sheep.VHall.Core.Config
     {
         internal static T Configure<T>() where T : class
         {
-            XmlElement config = ConfigurationManager.GetSection("vhall") as XmlElement;
+            var builder = new ConfigurationBuilder();
+            string vhallPath = Path.Combine(AppContext.BaseDirectory, "config.ini");
+            builder.AddIniFile(vhallPath);
 
-            VHallBaseConfig live = XmlHandle.XmlDeserialize<VHallBaseConfig>(config.OuterXml);
-
-            string path = AppDomain.CurrentDomain.BaseDirectory + live.Path + typeof(T).Name + ".xml";
+            var live = builder.Build().GetValue<VHallBaseConfig>("vhall");
+            string path = Path.Combine(AppContext.BaseDirectory, live.Path, typeof(T).Name, ".xml");
 
             return XmlHandle.XmlDeserializeFromFile<T>(path);
         }

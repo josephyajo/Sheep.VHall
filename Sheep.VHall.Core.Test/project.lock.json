@@ -1252,6 +1252,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Sheep.VHall.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.5",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "1.0.0",
+          "Microsoft.Extensions.Configuration.Ini": "1.0.0",
+          "NETStandard.Library": "1.5.0-rc2-24027",
+          "System.AppContext": "4.1.0",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Net.Requests": "4.0.11",
+          "System.Reflection.Emit.Lightweight": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Serialization.Json": "4.0.1",
+          "System.Threading.Tasks": "4.0.11",
+          "System.Xml.XmlDocument": "4.0.1",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "compile": {
+          "netstandard1.5/Sheep.VHall.Core.dll": {}
+        },
+        "runtime": {
+          "netstandard1.5/Sheep.VHall.Core.dll": {}
+        }
       }
     }
   },
@@ -4795,24 +4821,17 @@
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
+    },
+    "Sheep.VHall.Core/1.0.0": {
+      "type": "project",
+      "path": "../Sheep.VHall.Core/project.json",
+      "msbuildProject": "../Sheep.VHall.Core/Sheep.VHall.Core.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.Extensions.Configuration >= 1.0.0",
-      "Microsoft.Extensions.Configuration.Binder >= 1.0.0",
-      "Microsoft.Extensions.Configuration.Ini >= 1.0.0",
       "NETStandard.Library >= 1.5.0-rc2-24027",
-      "System.AppContext >= 4.1.0",
-      "System.Collections.NonGeneric >= 4.0.1",
-      "System.Net.Requests >= 4.0.11",
-      "System.Reflection.Emit.Lightweight >= 4.0.1",
-      "System.Reflection.TypeExtensions >= 4.1.0",
-      "System.Runtime.Extensions >= 4.1.0",
-      "System.Runtime.Serialization.Json >= 4.0.1",
-      "System.Threading.Tasks >= 4.0.11",
-      "System.Xml.XmlDocument >= 4.0.1",
-      "System.Xml.XmlSerializer >= 4.0.11"
+      "Sheep.VHall.Core >= 1.0.0-*"
     ],
     ".NETStandard,Version=v1.5": []
   },

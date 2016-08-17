@@ -1,4 +1,4 @@
-﻿using Sheep.VHall.Util;
+﻿using Sheep.VHall.Core.Util;
 using System;
 using System.Xml.Serialization;
 
