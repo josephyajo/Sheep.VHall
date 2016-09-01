@@ -5,9 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+[assembly: AssemblyTitle("Sheep.VHall.Core")]
+[assembly: AssemblyDescription("API of VHall")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Sheep.VHall.Core")]
+[assembly: AssemblyCopyright("Copyright © 2016 Joseph<YangJiong>")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
