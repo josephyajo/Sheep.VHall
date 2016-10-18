@@ -1,0 +1,31 @@
+﻿using System.Collections.Generic;
+
+namespace Sheep.VHall.Modules.Webinar.Accept
+{
+    public class WebinarListAccept : BaseAccept
+    {
+        public WebinarListData data { get; set; }
+    }
+
+    public class WebinarListData
+    {
+        public List<Lists> lists { get; set; }
+
+        public int total { get; set; }
+    }
+
+    public class Lists
+    {
+        public int webinar_id { get; set; }
+
+        public string subject { get; set; }
+
+        public string start_time { get; set; }
+
+        public Status status { get; set; }
+
+        public string desc { get; set; }
+
+        public string thumb { get; set; }
+    }
+}

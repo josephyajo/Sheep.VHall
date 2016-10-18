@@ -11,7 +11,7 @@ namespace Sheep.VHall.Tests
         public void GetWebinarListTest()
         {
             IVHallHandler vhallHandler = new VHallHandler();
-            WebinarListResponse val = vhallHandler.FetchWebinarList();
+            WebinarListAccept val = vhallHandler.FetchWebinarList();
             Assert.IsNotNull(val);
         }
 
@@ -19,7 +19,7 @@ namespace Sheep.VHall.Tests
         public void FetchWebinarStateTest()
         {
             IVHallHandler vhallHandler = new VHallHandler();
-            WebinarStateResponse val = vhallHandler.FetchWebinarState(833879698);
+            WebinarStateAccept val = vhallHandler.FetchWebinarState(833879698);
             Assert.IsNotNull(val);
         }
 
@@ -36,7 +36,7 @@ namespace Sheep.VHall.Tests
         {
             DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
             IVHallHandler vhallHandler = new VHallHandler();
-            WebinarUpdateResponse val = vhallHandler.SendWebinarUpdate(new WebinarUpdateRequest { webinar_id = 615369354, subject = "实盘ETC", start_time = (int)(DateTime.Parse("2016-08-16 17:04:00") - startTime).TotalSeconds, exist_3rd_auth = 1, auth_url = "http://www.3wdian.cn/api/MobileVideo/" });
+            WebinarUpdateAccept val = vhallHandler.SendWebinarUpdate(new WebinarUpdate { webinar_id = 615369354, subject = "实盘ETC", start_time = (int)(DateTime.Parse("2016-08-16 17:04:00") - startTime).TotalSeconds, exist_3rd_auth = 1, auth_url = "http://www.3wdian.cn/api/MobileVideo/" });
             Assert.IsNotNull(val);
         }
     }
