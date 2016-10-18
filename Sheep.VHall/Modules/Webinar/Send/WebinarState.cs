@@ -1,4 +1,5 @@
-﻿using Sheep.Kernel.Net;
+﻿using Sheep.Kernel.Convertion;
+using Sheep.Kernel.Net;
 using Sheep.Kernel.Serialization;
 using Sheep.Kernel.Validation.Attributes;
 using Sheep.VHall.Message;
@@ -22,8 +23,9 @@ namespace Sheep.VHall.Modules.Webinar.Send
         dynamic ISender.Send(string request)
         {
             HttpContext interaction = new HttpContext(request);
+            string value = ConvertionHandler.ToGB2312(interaction.Post());
             IStringSerializer factory = new JsonSerializerFactory().GetStringSerializer();
-            return factory.Deserialize<WebinarStateAccept>(interaction.Get());
+            return factory.Deserialize<WebinarStateAccept>(value);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Sheep.VHall.Modules
             foreach (PropertyInfo prop in props)
             {
                 Func<object, object> getValue = ReappearMember.CreatePropertyGetter(prop);
-                object value = getValue(this);
+                object value = getValue(obj);
                 if (value != null) SetValue(prop.Name, value);
             }
         }
