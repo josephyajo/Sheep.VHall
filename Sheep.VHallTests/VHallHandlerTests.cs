@@ -35,7 +35,7 @@ namespace Sheep.VHall.Tests
         {
             WebinarFetch webinarFetch = new WebinarFetch
             {
-                webinar_id = "180256660",
+                webinar_id = 180256660,
                 fields = "id,subject"
             };
             dynamic obj = VHallClient<Webinar>.Handle(webinarFetch);

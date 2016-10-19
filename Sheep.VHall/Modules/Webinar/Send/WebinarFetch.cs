@@ -12,7 +12,7 @@ namespace Sheep.VHall.Modules.Webinar.Send
         /// <summary>
         /// 9位数字, 活动ID
         /// </summary>
-        public string webinar_id { get; set; }
+        public int webinar_id { get; set; }
 
         /// <summary>
         /// 活动基础信息数据,字段之间用英文逗号,分割
