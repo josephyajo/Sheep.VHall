@@ -10,4 +10,3 @@ G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Debug\en-us\Sheep.Kernel.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Debug\zh-cn\Sheep.Kernel.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.pdb
-G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Debug\Sheep.VHall.csprojResolveAssemblyReference.cache

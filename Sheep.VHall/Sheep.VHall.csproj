@@ -68,6 +68,7 @@
     <Compile Include="Modules\Webinar\Accept\BaseAccept.cs" />
     <Compile Include="Modules\Webinar\Accept\WebinarListAccept.cs" />
     <Compile Include="Modules\Webinar\Accept\WebinarStateAccept.cs" />
+    <Compile Include="Modules\VHallExecption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VHallClient.cs" />
     <Compile Include="Webinar.cs" />
