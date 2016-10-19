@@ -16,7 +16,7 @@ namespace Sheep.VHall.Modules.Webinar.Send
         public int auth_type { get; set; }
 
         /// <summary>
-        /// Key
+        /// AppKey
         /// </summary>
         public string app_key { get; set; }
 
