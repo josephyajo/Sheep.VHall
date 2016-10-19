@@ -11,7 +11,6 @@ G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\obj\Debug\Sheep.VHall
 G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Debug\Configs\Autograph.xml
 G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Debug\Configs\Verification.xml
 G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHallTests\bin\Debug\Configs\VHallConfig.xml
-G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.csprojResolveAssemblyReference.cache
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\Configs\VHallConfig.xml
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\Sheep.VHallTests.dll.config
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\Sheep.VHallTests.dll
@@ -24,5 +23,6 @@ G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\Sheep.Kernel.pdb
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\en-us\Sheep.Kernel.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\zh-cn\Sheep.Kernel.resources.dll
+G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.csprojResolveAssemblyReference.cache
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.dll
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.pdb

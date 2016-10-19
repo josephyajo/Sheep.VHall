@@ -11,9 +11,13 @@ namespace Sheep.VHall.Tests
         [TestMethod()]
         public void GetWebinarListTest()
         {
-            //IVHallHandler vhallHandler = new VHallHandler();
-            //WebinarListAccept val = vhallHandler.FetchWebinarList();
-            //Assert.IsNotNull(val);
+            WebinarList webinarList = new WebinarList
+            {
+                limit = 10,
+                pos = 1,
+                type = 1
+            };
+            dynamic result = VHallClient<Webinar>.Handle(webinarList);
         }
 
         [TestMethod()]
@@ -29,18 +33,27 @@ namespace Sheep.VHall.Tests
         [TestMethod()]
         public void GetWebinarFetchTest()
         {
-            //IVHallHandler vhallHandler = new VHallHandler();
-            //WebinarFetchResponse val = vhallHandler.GetWebinarFetch(615369354);
-            //Assert.IsNotNull(val);
+            WebinarFetch webinarFetch = new WebinarFetch
+            {
+                webinar_id = "180256660",
+                fields = "id,subject"
+            };
+            dynamic obj = VHallClient<Webinar>.Handle(webinarFetch);
         }
 
         [TestMethod()]
         public void SendWebinarUpdateTest()
         {
-            //DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
-            //IVHallHandler vhallHandler = new VHallHandler();
-            //WebinarUpdateAccept val = vhallHandler.SendWebinarUpdate(new WebinarUpdate { webinar_id = 615369354, subject = "实盘ETC", start_time = (int)(DateTime.Parse("2016-08-16 17:04:00") - startTime).TotalSeconds, exist_3rd_auth = 1, auth_url = "http://www.3wdian.cn/api/MobileVideo/" });
-            //Assert.IsNotNull(val);
+            DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            WebinarUpdate webinarFetch = new WebinarUpdate
+            {
+                webinar_id = 615369354,
+                subject = "实盘ETC",
+                start_time = (int)(DateTime.Parse("2016-08-16 17:04:00") - startTime).TotalSeconds,
+                exist_3rd_auth = 1,
+                auth_url = "http://www.3wdian.cn/api/MobileVideo/"
+            };
+            dynamic obj = VHallClient<Webinar>.Handle(webinarFetch);
         }
     }
 }

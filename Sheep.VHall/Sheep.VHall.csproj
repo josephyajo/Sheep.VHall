@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\GenerateHandler.cs" />
+    <Compile Include="Handlers\DataFilterHandler.cs" />
     <Compile Include="Modules\Code.cs" />
     <Compile Include="Modules\Config\VHallConfig.cs" />
     <Compile Include="Message\ICommand.cs" />

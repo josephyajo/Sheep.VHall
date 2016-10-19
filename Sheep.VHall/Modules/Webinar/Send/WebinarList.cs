@@ -1,10 +1,9 @@
-﻿using System;
-using Sheep.VHall.Message;
-using System.Reflection;
-using Sheep.Kernel.Reflaction;
+﻿using Sheep.VHall.Message;
 using Sheep.Kernel.Net;
 using Sheep.Kernel.Serialization;
 using Sheep.VHall.Modules.Webinar.Accept;
+using Sheep.Kernel.Convertion;
+using Sheep.VHall.Handlers;
 
 namespace Sheep.VHall.Modules.Webinar.Send
 {
@@ -33,8 +32,9 @@ namespace Sheep.VHall.Modules.Webinar.Send
         dynamic ISender.Send(string request)
         {
             HttpContext interaction = new HttpContext(request);
+            string result = ConvertionHandler.ToGB2312(interaction.Post());
             IStringSerializer factory = new JsonSerializerFactory().GetStringSerializer();
-            return factory.Deserialize<WebinarListAccept>(interaction.Get());
+            return factory.Deserialize<WebinarListAccept>(DataFilterHandler.JsonFilter(result));
         }
     }
 }

@@ -1,11 +1,9 @@
 ﻿using Sheep.Kernel.Reflaction;
+using Sheep.Kernel.Security;
 using Sheep.VHall.Handlers;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sheep.VHall.Modules
 {
@@ -70,9 +68,11 @@ namespace Sheep.VHall.Modules
                 if (pair.Value == null)
                     continue;
 
-                string.Join("", sign, pair.Key, pair.Value);
+                sign += pair.Key + pair.Value;
             }
-            return string.Join("", sign, secret_key);
+            sign += secret_key;
+
+            return MD5Provider.Encode(sign);
         }
     }
 }
