@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <vhallconfig>
   <auth_type>2</auth_type>
-  <app_key>1363054200</app_key>
-  <secret_key>fcac92743bdfc256e46ac647f102797a</secret_key>
+  <app_key></app_key>
+  <secret_key></secret_key>
 </vhallconfig>
