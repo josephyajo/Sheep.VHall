@@ -2,6 +2,6 @@
 {
     public class WebinarUpdateAccept : BaseAccept
     {
-        public int data { get; set; }
+        public string data { get; set; }
     }
 }

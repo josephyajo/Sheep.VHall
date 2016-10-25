@@ -14,7 +14,7 @@ namespace Sheep.VHall.Tests
             WebinarList webinarList = new WebinarList
             {
                 limit = 10,
-                pos = 1,
+                pos = 0,
                 type = 1
             };
             dynamic result = VHallClient<Webinar>.Handle(webinarList);
@@ -47,11 +47,11 @@ namespace Sheep.VHall.Tests
             DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
             WebinarUpdate webinarFetch = new WebinarUpdate
             {
-                webinar_id = 615369354,
-                subject = "实盘ETC",
-                start_time = (int)(DateTime.Parse("2016-08-16 17:04:00") - startTime).TotalSeconds,
+                webinar_id = 792300546,
+                subject = "三连阳金融终端特供版",
+                start_time = (int)(DateTime.Parse("2016-11-17 17:04:00") - startTime).TotalSeconds,
                 exist_3rd_auth = 1,
-                auth_url = "http://www.3wdian.cn/api/MobileVideo/"
+                auth_url = "http://tg.sanlianyang.com/video/live/kvalue/verify"
             };
             dynamic obj = VHallClient<Webinar>.Handle(webinarFetch);
         }

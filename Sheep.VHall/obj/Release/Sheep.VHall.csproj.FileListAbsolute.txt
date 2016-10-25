@@ -1,7 +1,3 @@
-G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHall\bin\Release\Sheep.VHall.dll
-G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHall\bin\Release\Sheep.VHall.pdb
-G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHall\obj\Release\Sheep.VHall.dll
-G:\CJZK.CMS\CJZK.CMS.1.1\CMS.1.1\CJZK.CMS\Sheep.VHall\obj\Release\Sheep.VHall.pdb
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Release\Sheep.VHall.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Release\Sheep.VHall.pdb
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Release\Sheep.Kernel.dll
@@ -10,3 +6,4 @@ G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Release\en-us\Sheep.Kernel.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\bin\Release\zh-cn\Sheep.Kernel.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Release\Sheep.VHall.dll
 G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Release\Sheep.VHall.pdb
+G:\Sheep\Sheep.VHall\Sheep.VHall\obj\Release\Sheep.VHall.csprojResolveAssemblyReference.cache

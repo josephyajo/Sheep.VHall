@@ -11,7 +11,7 @@ namespace Sheep.VHall.Handlers
     {
         public static string JsonFilter(string source)
         {
-            return Regex.Match(source, ".*?({[^}]+}).*?")?.Groups[1].Value;
+            return Regex.Match(source, ".*?({[^}+].+}).*?")?.Groups[1].Value;
         }
     }
 }

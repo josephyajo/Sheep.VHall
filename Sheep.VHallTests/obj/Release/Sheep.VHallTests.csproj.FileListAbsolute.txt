@@ -22,3 +22,4 @@ G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Release\zh-cn\Sheep.Kernel.resources.d
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Release\Sheep.VHallTests.csprojResolveAssemblyReference.cache
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Release\Sheep.VHallTests.dll
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Release\Sheep.VHallTests.pdb
+G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Release\Configs\VHallConfig.xml

@@ -25,3 +25,4 @@ G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\zh-cn\Sheep.Kernel.resources.dll
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.csprojResolveAssemblyReference.cache
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.dll
 G:\Sheep\Sheep.VHall\Sheep.VHallTests\obj\Debug\Sheep.VHallTests.pdb
+G:\Sheep\Sheep.VHall\Sheep.VHallTests\bin\Debug\Configs\VHallConfig.xml
